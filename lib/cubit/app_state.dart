@@ -5,3 +5,4 @@ abstract class AppState {}
 
 class AppInitial extends AppState {}
 class ChangeBottomNavBarState extends AppState{}
+class ChangeTabBarState extends AppState{}

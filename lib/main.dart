@@ -19,11 +19,24 @@ class MyApp extends StatelessWidget {
       create: (context) => AppCubit(),
       child: MaterialApp(
         theme: ThemeData(
+          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+            elevation: 0.0,
+            selectedItemColor: Colors.black,
+            unselectedItemColor: Colors.grey,
+            backgroundColor: Colors.white,
+            selectedIconTheme: IconThemeData(
+              size: 35.0,
+            ),
+            unselectedIconTheme: IconThemeData(
+              size: 25.0
+            ),
+            showSelectedLabels: true,
+            showUnselectedLabels: false,
+            type: BottomNavigationBarType.shifting
+          ),
             tabBarTheme: TabBarTheme(
               labelColor: Colors.black,
-
             ),
-            scaffoldBackgroundColor: Colors.white,
             appBarTheme: AppBarTheme(
                 color: Colors.white,
                 elevation: 0.0,
