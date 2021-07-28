@@ -25,10 +25,7 @@ class _HomeLayoutState extends State<HomeLayout> with TickerProviderStateMixin {
       builder: (context, state) {
         return Scaffold(
           body: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: AppCubit.get(context).screens[AppCubit.get(context).currentScreen],
-            ),
+            child: AppCubit.get(context).screens[AppCubit.get(context).currentScreen],
           ),
           bottomNavigationBar: BottomNavigationBar(
             onTap: (int index) {
