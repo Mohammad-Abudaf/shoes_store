@@ -5,6 +5,7 @@ import 'package:shoes_store/roots/products_screen/adidas_screen.dart';
 import 'package:shoes_store/roots/products_screen/asics_screen.dart';
 import 'package:shoes_store/roots/products_screen/nike_screen.dart';
 import 'package:shoes_store/roots/products_screen/puma_screen.dart';
+import 'package:slide_drawer/slide_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -32,7 +33,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  SlideDrawer.of(context)!.toggle();
+                },
                 child: Icon(
                   Icons.list_rounded,
                   size: 40,
@@ -89,7 +92,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   AdidasTab(),
                   PumaTab(),
                   AsicsTab(),
-                ]),
+                ]
+            ),
           ),
         ],
       ),
